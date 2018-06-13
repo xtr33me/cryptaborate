@@ -1,5 +1,4 @@
 pragma solidity ^0.4.10;
-//pragma experimental ABIEncoderV2;
 
 contract ProjectManager {
     struct AppliedUser {
@@ -66,82 +65,5 @@ contract ProjectManager {
         proj.positions[posIndex].appliedUsers[applicant] = AppliedUser({user: msg.sender, positionIndex:posIndex, amountToReceive:desiredAmount, hasApplied: true});
     }
 
-    /*function contribute(uint campaignId) public payable {
-        Campaign storage c = campaigns[campaignId];
-        c.funders[c.numFunders++] = Funder({addr: msg.sender, amount: msg.value});
-        c.amount += msg.value;
-    }*/
-
-    /*function checkGoalReached(uint campaignId) public returns (bool reached){
-        Campaign storage c = campaigns[campaignId];
-        if(c.amount < c.fundingGoal)
-            return false;
-        uint amount = c.amount;
-        c.amount = 0;
-        c.benificiary.transfer(amount);
-        return true;
-    }*/
     
-    //function modifyPositions()
-
-    /*function ModifyProject(string category, string name, string description, Position[] positions) public {
-        _category = category;
-        _name = name;
-        _description = description;
-        //_positions = positions;
-    }
-
-    function getCategory() public returns(string) {
-        return category;
-    }
-
-    function getRanking() public returns(uint) {
-        return ranking;
-    }
-
-    function getStatus() public returns (uint) {
-        return uint(status);
-    }*/
-
-    //Position[] public currentPositions;
-
-    //mapping (address=>int) public userTopScores;
-    
-    // function setTopScore(int256 score, uint8 v, bytes32 r, bytes32 s) {
-    //     var hash = sha3(msg.sender, owner, score);
-    //     var addressCheck = ecrecover(hash, v, r, s);
-        
-    //     if(addressCheck != owner) throw;
-        
-    //     var currentTopScore = userTopScores[msg.sender];
-    //     if(currentTopScore < score){
-    //         userTopScores[msg.sender] = score;
-    //     }
-
-    //     if(topScores.length < maxTopScores){
-    //         var topScore = TopScore(msg.sender, score);
-    //         topScores.push(topScore);
-    //     }else{
-    //         int lowestScore = 0;
-    //         uint lowestScoreIndex = 0; 
-    //         for (uint i = 0; i < topScores.length; i++)
-    //         {
-    //             TopScore currentScore = topScores[i];
-    //             if(i == 0){
-    //                 lowestScore = currentScore.score;
-    //                 lowestScoreIndex = i;
-    //             }else{
-    //                 if(lowestScore > currentScore.score){
-    //                     lowestScore = currentScore.score;
-    //                     lowestScoreIndex = i;
-    //                 }
-    //             }
-    //         }
-    //         if(score > lowestScore){
-    //             var newtopScore = TopScore(msg.sender, score);
-    //             topScores[lowestScoreIndex] = newtopScore;
-    //         }
-    //     }
-    // }
-
 }
