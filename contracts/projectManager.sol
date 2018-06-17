@@ -1,4 +1,5 @@
 pragma solidity ^0.4.10;
+//pragma experimental ABIEncoderV2;
 
 contract ProjectManager {
     struct AppliedUser {
@@ -65,5 +66,4 @@ contract ProjectManager {
         proj.positions[posIndex].appliedUsers[applicant] = AppliedUser({user: msg.sender, positionIndex:posIndex, amountToReceive:desiredAmount, hasApplied: true});
     }
 
-    
 }
